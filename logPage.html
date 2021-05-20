@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This single page responsive web application is built to collect and store simple data about the updates applied to databases in the workplace.">
+    <link rel="stylesheet" href="logPage.css">
+    <script type="text/javascript" src="logPage.js"></script>
+    <title>Log</title>
+</head>
+<body>
+    <main id="mainHolder">
+        <h1>Test Environment Update Log</h1>
+            
+        <p>Thank you using this web app in order to consolidate the updates made to the Test Environments.</p>
+        <p>The data input here should accurately describe the changes made to the Environments.</p>
+        <p>Please use the input fields below to input your changes and information and please note changes are permanent.<br><i>(Input fields autofocus to "DB Name" and are both keyboard and mouse navigable)</i></p>
+        <span>
+            <h3>Important:</h3>
+            <p>If a mistake is made after submitting the form, please add the complete and correct data in a <strong>new row</strong> and contact admin <i>(Cameron Samuels)</i> to remove the erroneous data.<br><i>(This is done to minimise human error i.e. deleting the wrong row by accident)</i></p>
+        </span>    
+    </main>
+
+    <div id = "container">
+        <h2>Insert Updates Applied to DB</h2>
+        <form id="inputForm" method="post" onsubmit= "forwardToTable();focusAfterClick(); return false;" autocomplete="off">
+            
+            <table id="inputTable">
+                
+                <tr>
+                    <th>DB Name</th>
+                    <th>DB Purpose</th>
+                    <th>DB Owner</th>                
+                    <th>User's Initals</th>
+                    <th>Change Made by User</th>
+                    <th>Date of Modification</th>
+                    <th>Time of Modification</th>
+                    <th>Apply Changes</th>
+                </tr>
+                <tr>
+                    <td><select name="DB" id="DB" alt="Database name, dropdown menu" autofocus required>
+                        <option disabled selected value> -- Select DB --</option>
+                        <option value="Apprentice Test DB">Apprentice Test DB</option>
+                        <option value="Live Test DB01">Live Test DB01</option>
+                        <option value="Live Test DB02">Live Test DB02</option>
+                    </select></td>
+                    <td><select name="purpose" id="DB-purpose" alt="Database purpose, dropdown menu" required>
+                        <option disabled selected value> -- Select Purpose -- </option>
+                        <option value="Breaking stuff">Breaking stuff</option>
+                        <option value="Testing with live data">Testing with live data</option>
+                        <option value="Testing with test data">Testing with test data</option>
+                    </select></td>
+                    <td><select name="Owner" id="DB-owner" alt="Database owner, dropdown menu" required>
+                        <option disabled selected value> -- Select Owner --</option>
+                        <option value="CS">CS</option>
+                        <option value="DBAs">DBAs</option>
+                        <option value="Some other unlucky person">Unknown</option>
+                    </select></td>       
+                    <td><input id="IoU" type="text" maxlength="3" placeholder="Initials..." alt="User's initals, text input, maximum 3 characters" required></td>         
+                    <td><input id="userChanges" type="text" placeholder="User's Changes..." alt="User's changes, text input" required></td> 
+                    <td><input id="date" type="date" alt="Date of changes, keyboard input or select box" required></td> 
+                    <td><input id="time" type="time" alt="Time of changes, keyboard input or select box" required></td> 
+                    <td><button id="apply" type="submit" alt="Button to apply input fields to the table, keyboard or mouse navigable" >Apply</button></td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+      
+    <div id = "container1">
+        <h2>All Updates to Apprentice DB</h2>
+        <table id="a_table">
+            
+            <tr>
+                <th>DB Name</th>
+                <th>DB Purpose</th>
+                <th>DB Owner</th>                
+                <th>Initals of User</th>
+                <th>Change Made by User</th>
+                <th>Date of Modification</th>
+                <th>Time of Modification</th>
+                
+            </tr>
+
+        </table>
+    </div>
+
+    <div id = "container2">
+        <h2>All Updates to DB01</h2>
+        <table id="table01">
+            
+            <tr>
+                <th>DB Name</th>
+                <th>DB Purpose</th>
+                <th>DB Owner</th>                
+                <th>Initals of User</th>
+                <th>Change Made by User</th>
+                <th>Date of Modification</th>
+                <th>Time of Modification</th>
+                
+            </tr>
+            
+        </table>
+    </div>
+
+    <div id = "container3">
+        <h2>All Updates to DB02</h2>
+        <table id="table02">
+            
+            <tr>
+                <th>DB Name</th>
+                <th>DB Purpose</th>
+                <th>DB Owner</th>                
+                <th>Initals of User</th>
+                <th>Change Made by User</th>
+                <th>Date of Modification</th>
+                <th>Time of Modification</th>
+                
+            </tr>
+            
+        </table>
+    </div>  
+    
+</body>
+</html>
+
+<!-- Everything after here is no longer the work of Cameron Samuels-->
